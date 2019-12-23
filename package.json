@@ -1,0 +1,28 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "dev": "vuepress dev ./docs",
+    "build": "vuepress build ./docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleepq123/skills_blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sleepq123/skills_blog/issues"
+  },
+  "homepage": "https://github.com/sleepq123/skills_blog#readme",
+  "dependencies": {
+    "gitalk": "^1.5.0",
+    "vuepress-plugin-comment": "^0.7.2"
+  }
+}

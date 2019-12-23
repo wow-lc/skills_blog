@@ -1,7 +1,7 @@
 module.exports = {
   title: "个人博客",
   description: "技术总结",
-  base: "/blog/",
+  base: "/skills_blog/",
   themeConfig: {
     displayAllHeaders: true,
     locales: {
@@ -68,18 +68,18 @@ module.exports = {
         algolia: {},
         nav: [
             { text: "Home", link: "/" }, // 根路径
-            { text: "Js", link: "/js/" },
+            { text: "Js", link: "/_en/js/" },
             {
               text: "Frame",
               items: [
-                { text: "Vue", link: "/vue/" },
-                { text: "React", link: "/react/" }
+                { text: "Vue", link: "/_en/vue/" },
+                { text: "React", link: "/_en/react/" }
               ]
             },
             { text: "Github", link: "https://github.com/sleepq123" }
           ], // 外部链接
         sidebar: {
-          "/js": [
+          "/_en/js": [
             {
               title: "基础篇",
               children: [["/js/base/variable", "数据类型"]]
@@ -106,13 +106,13 @@ module.exports = {
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     "/": {
       lang: "zh-CN", // 将会被设置为 <html> 的 lang 属性
-      title: "VuePress",
-      description: "Vue 驱动的静态网站生成器"
+      title: "博 客",
+      description: "我的博客"
     },
     "/_en/": {
       lang: "en-US",
-      title: "VuePress",
-      description: "Vue-powered Static Site Generator"
+      title: "BLOG",
+      description: "Mine Blog"
     }
   }
 };
