@@ -1,3 +1,5 @@
+import "./public/styles/basic.css";
+
 function integrateGitalk(router) {
   const linkGitalk = document.createElement("link");
   linkGitalk.href = "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css";
