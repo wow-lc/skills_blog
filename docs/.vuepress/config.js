@@ -19,10 +19,11 @@ module.exports = {
       title: "博 客",
       description: "我的博客"
     },
-    "/_en/": {
-      lang: "en-US",
-      title: "BLOG",
-      description: "Mine Blog"
-    }
+    // TODO 暂时 注释掉英文
+    // "/_en/": {
+    //   lang: "en-US",
+    //   title: "BLOG",
+    //   description: "Mine Blog"
+    // }
   }
 };

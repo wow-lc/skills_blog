@@ -17,6 +17,7 @@ module.exports = {
   nav: [
     { text: "主页", link: "/" }, // 根路径
     { text: "Js", link: "/js/" },
+    { text: "Css",link:"/css/"},
     {
       text: "frame",
       items: [
@@ -29,12 +30,12 @@ module.exports = {
     { text: "Github", link: "https://github.com/sleepq123" }
   ], // 外部链接
   sidebar: {
-    "/js": [
+    "/js/": [
       {
         title: "基础篇",
         children: [
-          ["/js/base/variable", "数据类型"],
-          ["/js/base/otherKill", "其他js技巧"]
+          ["base/variable", "数据类型"],
+          ["base/otherKill", "其他js技巧"]
         ]
       },
       {
@@ -44,12 +45,22 @@ module.exports = {
         ]
       },
       {
-        title: "资源",
+        title: "设计模式",
         children: [
-          /* ... */
+          ["pattern/singtelon", "单例模式"],
         ]
+      },
+      {
+        title: "资源",
+        path: "resouce"
       }
     ],
+    "/css":  [{
+      title: "基础篇",
+      children: [
+        ["/css/base/name", "命名规范"],
+      ]
+    }],
     "/rn": [
         {
           title: "基础篇",

@@ -1,4 +1,5 @@
 import "./public/styles/basic.css";
+const config = require("../config");
 
 function integrateGitalk(router) {
   const linkGitalk = document.createElement("link");
@@ -36,12 +37,12 @@ function integrateGitalk(router) {
   }
   function renderGitalk(fullPath) {
     const gitalk = new Gitalk({
-      clientID: "0a956349e354264be4c4",
-      clientSecret: "2973b89cbc6925b0701fe6775d127205c06bfc7a", // come from github development
+      clientID: config.GITALK_CLINET_ID,
+      clientSecret: config.GITALK_CLINET_SECRET, // come from github development
       repo: "skills_blog",
       owner: "sleepq123",
       admin: ["sleepq123"],
-      id: "comment",
+      id: fullPath,
       distractionFreeMode: false,
       language: "zh-CN"
     });
