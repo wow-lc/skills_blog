@@ -41,7 +41,7 @@ module.exports = {
       {
         title: "进阶篇",
         children: [
-          /* ... */
+          ["advance/debounce_throttle", "防抖/节流"],
         ]
       },
       {
@@ -59,6 +59,7 @@ module.exports = {
       title: "基础篇",
       children: [
         ["/css/base/name", "命名规范"],
+        ["/css/base/pixel", "设计稿像素还原"],
       ]
     }],
     "/rn": [
