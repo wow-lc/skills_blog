@@ -42,6 +42,7 @@ module.exports = {
         title: "进阶篇",
         children: [
           ["advance/debounce_throttle", "防抖/节流"],
+          ["advance/bind_call_apply", "bind、call、apply"]
         ]
       },
       {

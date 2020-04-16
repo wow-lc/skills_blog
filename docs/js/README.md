@@ -2,4 +2,4 @@
 title: Js
 ---
 # JavaScript 
-> this is test for blog   
+Talk is easy, show me the code.  

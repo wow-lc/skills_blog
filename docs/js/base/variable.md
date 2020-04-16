@@ -1,14 +1,14 @@
 ---
 title: js
 ---
-- 1.js有几种语言类型
+## 1.js有几种语言类型
 ```javascript
 7种。 
 基本类型6种: String, Number, Boolean, Null, Undefind, Symbol
 引用类型1种: Object
 ```
 
-- 2.Symbol的实际运用场景
+## 2.Symbol的实际运用场景
 ```
 /** 首先Symbol的特性是唯一值的变量,因此可以创建枚举类型,可以避免名称冲突 **/
 const directions = {
@@ -21,7 +21,7 @@ const directions = {
 
 **注意：以symbol作为的属性名,不会被遍历出来。需要`Reflect.ownKeys`或`Object.getOwnPropertySymbols`遍历**
 
-- 3.值类型和引用类型的理解
+## 3.值类型和引用类型的理解
 ```
 - 值类型
 存放于内存的栈中
@@ -31,7 +31,7 @@ const directions = {
 存放于栈对应指向堆的地方
 从一个变量向另一个变量赋值的时候，只是将在栈中指向堆的地址分配给新变量，指向的对地址不变。
 ```
-- 4.undefind与null的区别
+## 4.undefind与null的区别
 ```
 - null表示"没有对象"，即该处不应该有值。
 
@@ -48,8 +48,8 @@ const directions = {
 ```
 引自[阮一峰的网络日志](https://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html)
 
-- 5.JavaScript数据类型的方式
-> typeof
+## 5.JavaScript数据类型的方式
+### typeof
 ```
 示例：
 console.log(type('this.string'));
@@ -65,7 +65,7 @@ console.log(type('this.string'));
 特殊情况 typeof(null) -> null
 ```
 
-> instanceof
+### instanceof
 ```
 示例：
 console.log('this.string' instanceof String);
@@ -80,7 +80,7 @@ console.log(new String('this is string') instanceof String)
 无法对基础类型进行判断
 ```
 
-> constructor
+### constructor
 ```
 示例：
 'this.string'.constructor == String
@@ -94,7 +94,7 @@ console.log(new String('this is string') instanceof String)
 (2)使用constructor是不保险的，因为constructor属性是可以被修改的
 ```
 
-> Object.propertype.toString.call()
+### Object.propertype.toString.call()
 ```
 示例：
 Object.prototype.toString.call('this is str')

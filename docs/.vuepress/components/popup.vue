@@ -17,7 +17,7 @@ let createSingleton = function(func) {
 let createPopup = createSingleton(() => {
     let div = document.createElement('div');
     div.className = 'popup-shade-box';
-    div.innerHTML = '登录弹窗';
+    div.innerHTML = '单例消息框';
     let closeNode = document.createElement('i');
     closeNode.className = 'popup-close';
     closeNode.innerHTML = 'X';
@@ -53,12 +53,12 @@ export default {
     left:0;
     right:0;
     top: 120px;
-    width: 500px;
-    height: 300px;
+    width: 120px;
+    height: 40px;
     border-radius: 5px;
     margin: 0 auto;
     text-align: center;
-    line-height: 30px;
+    line-height: 40px;
     color: #fff;
     background: rgba(0,0,0, 0.8);
     animation: move-in .5s ease;
@@ -67,6 +67,7 @@ export default {
     position: absolute;
     right: 5px;
     border: 5px solid transparent;
+    line-height: 30px;
     cursor: pointer;
 }
 </style>

@@ -49,23 +49,12 @@ o.hasOwnProperty("y");    　　 //false，自有属性中不存在y
 o.hasOwnProperty("toString"); //false，这是一个继承属性，但不是自有属性
 ```
 
-#### 4.数组对象根据属性进行排序
-- **sort**
-```S
-
-```
-#### 5.遍历数组的几种方法
+#### 4.遍历数组的几种方法
 + for of
-#### 6.遍历对象属性的几种方法
+#### 5.遍历对象属性的几种方法
 + for in 
 
-#### 6. this,call,bind,apply 
-> https://juejin.im/post/59bfe84351882531b730bac2
-```
-
-```
-
-#### 7. 如何控制多个请求的执行顺序
+#### 6. 如何控制多个请求的执行顺序
 > 1.都返回Promise，放入Promise.all中实现顺序执行
 > 2.同步回调
 ```
