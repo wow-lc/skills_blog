@@ -17,28 +17,25 @@ title: 防抖/节流
  * @param wait 延迟执行毫秒数
  * @param immediate true 表立即执行，false 表非立即执行
  */
-function debounce(func,wait,immediate) {
-    let timeout;
-
-    return function () {
+function debounce(fn, wait, immediate) {
+    let timer;
+    
+    return function() {
         let context = this;
         let args = arguments;
-
-        if (timeout) clearTimeout(timeout);
-        if (immediate) {
-            var callNow = !timeout;
-            timeout = setTimeout(() => {
-                timeout = null;
-            }, wait)
-            if (callNow) func.apply(context, args)
+        
+        if(immediate && !timer) {
+            fn.apply(context, args); 
         }
-        else {
-            timeout = setTimeout(function(){
-                func.apply(context, args)
-            }, wait);
+        if(timer){
+            timer = clearTimeout(timer);
         }
+        timer = setTimeout(() => {
+            fn.apply(context, args); 
+            timer = clearTimeout(timer);
+        },wait);
     }
-}
+};
 ```
 
 #### 小例子
@@ -50,10 +47,39 @@ function debounce(func,wait,immediate) {
 当持续触发事件时，保证一段时间内只调用一次事件处理函数.
 
 #### 实现思路
-- 时间戳实现
-```
-function throttle() {
-    
+**通过时间戳实现**
+- 1.保存当前时间
+- 2.根据（当前时间 - 上次保存时间）是否大于设置dely时间,若大于执行，反之不执行fn 
+```javascript
+function throttle(fn, dely) {
+    let start = 0;
+    return function() {
+        let context = this;
+        let args = arguments;
+        let now = Date.now();
+        if(now - start > dely) {
+            fn.apply(context, args);
+        }
+    }
 }
 ```
-#### 代码实现
+**通过定时器实现**
+- 1.首次执行调用定时器
+- 2.再次执行会判断是否存在未执行完的定时器.若有,跳过不执行；反之,重新执行定时器
+```javascript
+function throttle(fn, dely){
+    let timer;
+    return function() {
+        let context = this;
+        let args = arguments;
+        if(!timer) {
+            timer =  setTimeout(() => {
+                timer = null;
+                fn.apply(context,args);
+            }, dely);
+        }
+    }
+}
+```
+#### 小例子
+<throttle></throttle>
