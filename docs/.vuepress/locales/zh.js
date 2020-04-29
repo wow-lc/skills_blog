@@ -18,6 +18,7 @@ module.exports = {
     { text: "主页", link: "/" }, // 根路径
     { text: "Js", link: "/js/" },
     { text: "Css",link:"/css/"},
+    { text: "微前端",link:"/micro_frontend/"},
     {
       text: "frame",
       items: [
@@ -61,6 +62,14 @@ module.exports = {
       children: [
         ["/css/base/name", "命名规范"],
         ["/css/base/pixel", "设计稿像素还原"],
+        ["/css/base/worth", "值得去学习的Css技巧"],
+      ]
+    }],
+    "/micro_frontend/": [{
+      title: "微前端",
+      children: [
+        ["/micro_frontend/introduce", "介绍"],
+        ["/micro_frontend/main", "主题架构"],
       ]
     }],
     "/rn": [
