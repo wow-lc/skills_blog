@@ -29,7 +29,7 @@ module.exports = {
         { text: "react native", link: "/rn/" },
       ],
     },
-
+    { text: "资源", link: "/resource/" },
     { text: "Github", link: "https://github.com/sleepq123" },
   ], // 外部链接
   sidebar: {
@@ -92,7 +92,7 @@ module.exports = {
       {
         title: "进阶篇",
         children: [
-          /* ... */
+          ["/rn/advance/offline-caching","离线缓存"]
         ],
       },
       {
