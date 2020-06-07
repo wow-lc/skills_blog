@@ -17,7 +17,6 @@ module.exports = {
   // 当前 locale 的 algolia docsearch 选项
   algolia: {},
   nav: [
-    { text: "主页", link: "/" }, // 根路径
     { text: "Js", link: "/js/" },
     { text: "Css", link: "/css/" },
     { text: "微前端", link: "/micro_frontend/" },
@@ -31,6 +30,7 @@ module.exports = {
     },
 
     { text: "Github", link: "https://github.com/sleepq123" },
+    { text: "关于我", link: "/about/" },
   ], // 外部链接
   sidebar: {
     "/js/": [
