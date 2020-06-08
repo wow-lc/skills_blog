@@ -19,17 +19,17 @@ module.exports = {
   nav: [
     { text: "主页", link: "/" }, // 根路径
     { text: "Js", link: "/js/" },
-    { text: "Css", link: "/css/" },
-    { text: "微前端", link: "/micro_frontend/" },
+    { text: "Css", link: "/css/" },    
     {
-      text: "frame",
+      text: "Frame",
       items: [
         { text: "Vue", link: "/vue/" },
         { text: "React", link: "/react/" },
         { text: "react native", link: "/rn/" },
       ],
     },
-    { text: "资源", link: "/resource/" },
+    { text: "微前端", link: "/micro_frontend/" },
+    { text: "资源/收藏", link: "/resource/" },
     { text: "Github", link: "https://github.com/sleepq123" },
   ], // 外部链接
   sidebar: {
@@ -102,6 +102,11 @@ module.exports = {
         ],
       },
     ],
-    "/react": [{}],
+    "/react": [{
+      title: "进阶篇",
+      children: [
+        ["/react/advance/pureComponent","PureComponent优化react渲染"]
+      ],
+    },],
   },
 };
