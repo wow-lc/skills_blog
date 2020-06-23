@@ -5,7 +5,7 @@ module.exports = {
   description: "技术总结",
   base: "/skills_blog/",
   themeConfig: {
-    displayAllHeaders: false,
+    // displayAllHeaders: false,
     locales: {
       "/": locales.local_zh,
       "/_en/": locales.local_en,

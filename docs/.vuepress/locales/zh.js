@@ -17,6 +17,7 @@ module.exports = {
   // 当前 locale 的 algolia docsearch 选项
   algolia: {},
   nav: [
+    { text: "web", link: "/web/" },
     { text: "Js", link: "/js/" },
     { text: "Css", link: "/css/" },
     { text: "微前端", link: "/micro_frontend/" },
@@ -33,6 +34,16 @@ module.exports = {
     { text: "关于我", link: "/about/" },
   ], // 外部链接
   sidebar: {
+    "/web/": [
+      {
+        title: "基础篇",
+        children: [
+          ["base/webWork", "web的工作原理"],
+          ["base/tcp", "tcp三次握手，四次挥手"],
+          ["base/reflowAndRepaint", "重排与重绘"],
+        ],
+      },
+    ],
     "/js/": [
       {
         title: "基础篇",
@@ -44,6 +55,8 @@ module.exports = {
       {
         title: "进阶篇",
         children: [
+          ["advance/this", "this关键词指向"],
+          ["advance/closure", "闭包"],
           ["advance/debounce_throttle", "防抖/节流"],
           ["advance/bind_call_apply", "bind、call、apply"],
         ],
