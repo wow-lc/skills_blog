@@ -13,16 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sleepq123/skills_blog.git"
+    "url": "git+https://github.com/wow-lc/skills_blog.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sleepq123/skills_blog/issues"
+    "url": "https://github.com/wow-lc/skills_blog/issues"
   },
-  "homepage": "https://github.com/sleepq123/skills_blog#readme",
+  "homepage": "https://github.com/wow-lc/skills_blog#readme",
   "dependencies": {
     "gitalk": "^1.5.0",
+    "vuepress": "^1.9.8",
     "vuepress-plugin-comment": "^0.7.2"
   },
   "devDependencies": {

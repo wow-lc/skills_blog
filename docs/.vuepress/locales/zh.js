@@ -30,7 +30,7 @@ module.exports = {
       ],
     },
 
-    { text: "Github", link: "https://github.com/sleepq123" },
+    { text: "Github", link: "https://github.com/wow-lc" },
     { text: "关于我", link: "/about/" },
   ], // 外部链接
   sidebar: {
@@ -63,7 +63,11 @@ module.exports = {
       },
       {
         title: "设计模式",
-        children: [["pattern/singtelon", "单例模式"]],
+        children: [
+          ["pattern/singtelon", "单例模式"],
+          ["pattern/observer", "观察者模式"],
+          ["pattern/publish-subscribe", "发布-订阅模式"],
+        ],
       },
       {
         title: "资源",
@@ -104,9 +108,7 @@ module.exports = {
       },
       {
         title: "进阶篇",
-        children: [
-          ["/rn/advance/offline-caching","离线缓存"]
-        ],
+        children: [["/rn/advance/offline-caching", "离线缓存"]],
       },
       {
         title: "资源",
@@ -115,11 +117,13 @@ module.exports = {
         ],
       },
     ],
-    "/react": [{
-      title: "进阶篇",
-      children: [
-        ["/react/advance/pureComponent","PureComponent优化react渲染"]
-      ],
-    },],
+    "/react": [
+      {
+        title: "进阶篇",
+        children: [
+          ["/react/advance/pureComponent", "PureComponent优化react渲染"],
+        ],
+      },
+    ],
   },
 };

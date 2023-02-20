@@ -22,4 +22,4 @@ yarn-error.log*
 package-lock.json
 
 # 密钥配置文件
-/docs/config.js
+# /docs/config.js

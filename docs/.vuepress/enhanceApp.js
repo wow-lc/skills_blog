@@ -10,7 +10,7 @@ function integrateGitalk(router) {
   scriptGitalk.src = "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js";
   document.body.appendChild(scriptGitalk);
 
-  router.afterEach(to => {
+  router.afterEach((to) => {
     if (scriptGitalk.onload) {
       loadGitalk(to);
     } else {
@@ -40,11 +40,11 @@ function integrateGitalk(router) {
       clientID: config.GITALK_CLINET_ID,
       clientSecret: config.GITALK_CLINET_SECRET, // come from github development
       repo: "skills_blog",
-      owner: "sleepq123",
-      admin: ["sleepq123"],
+      owner: "wow-lc",
+      admin: ["wow-lc"],
       id: fullPath,
       distractionFreeMode: false,
-      language: "zh-CN"
+      language: "zh-CN",
     });
     gitalk.render("gitalk-container");
   }
@@ -54,7 +54,7 @@ export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数
   options, // 附加到根实例的一些选项
   router, // 当前应用的路由实例
-  siteData // 站点元数据
+  siteData, // 站点元数据
 }) => {
   try {
     document && integrateGitalk(router);
